@@ -49,6 +49,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
+        {/* filter list based on isHidden */}
         <TodoList todoList={this.state.isHidden ? this.state.todoList.filter(el => !el.completed) : this.state.todoList} itemClickHandler={this.toDoItemClickHandler}></TodoList>
         <Form 
         isHidden={this.state.isHidden}
